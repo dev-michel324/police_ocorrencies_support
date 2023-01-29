@@ -19,17 +19,6 @@ public class Ocorrencies {
 		return this.id;
 	}
 
-	@Column(name = "name", nullable = false, length = 255)
-	private String name;
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	@Column(name = "description", nullable = false, length = 255)
 	private String description;
 
@@ -41,20 +30,31 @@ public class Ocorrencies {
 		this.description = description;
 	}
 
-	@Column(name = "location", nullable = false, length = 255)
-	private String location;
-
-	public String getLocation() {
-		return this.location;
+	@Column(name = "latitude", nullable = false, length = 22)
+	private String latitude;
+	
+	public String getLatitude() {
+		return this.latitude;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
+
+	@Column(name = "longitude", nullable = false, length = 22)
+	private String longitude;
+
+	public String getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
 	}
 
 	@Override
 	public String toString() {
-		return "[name : " + this.name + ", description : " + this.description + ", location: " + this.location + "]";
+		return "[description : " + this.description + ", locationX: " + this.locationX + ", locationY: "+ this.locationY +"]";
 	}
 
 }
