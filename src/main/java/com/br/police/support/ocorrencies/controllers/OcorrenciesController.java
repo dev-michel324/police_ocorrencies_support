@@ -48,9 +48,9 @@ public class OcorrenciesController {
 		Optional<Ocorrencies> oldOcorrencie = ocorrencieRepository.findById(id);
 		if (oldOcorrencie.isPresent()) {
 			Ocorrencies ocorrencie = oldOcorrencie.get();
-			ocorrencie.setName(newOcorrencie.getName());
 			ocorrencie.setDescription(newOcorrencie.getDescription());
-			ocorrencie.setLocation(newOcorrencie.getLocation());
+			ocorrencie.setLatitude(newOcorrencie.getLatitude());
+			ocorrencie.setLongitude(newOcorrencie.getLongitude());
 			ocorrencieRepository.save(ocorrencie);
 			return new ResponseEntity<Ocorrencies>(ocorrencie, HttpStatus.OK);
 		} else {
