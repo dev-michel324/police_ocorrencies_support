@@ -54,7 +54,7 @@ public class Ocorrencies {
 
 	@Override
 	public String toString() {
-		return "[description : " + this.description + ", locationX: " + this.locationX + ", locationY: "+ this.locationY +"]";
+		return "[description : " + this.description + ", latitude: " + this.latitude + ", longitude: "+ this.longitude +"]";
 	}
 
 }
